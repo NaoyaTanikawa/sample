@@ -1,4 +1,13 @@
 {
-  "name": "sample_atom",
-  "version": "0.0.1"
+	"name": "sample_atom",
+	"version": "0.0.1",
+	"dependencies": {
+		"body-parser": "^1.14.2",
+		"express": "^4.13.4",
+		"request": "2.61.0"
+	},
+	"engines": {
+		"node": "v4.1.X",
+		"npm": "2.14.X"
+	}
 }
