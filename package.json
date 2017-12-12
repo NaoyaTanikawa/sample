@@ -2,7 +2,9 @@
     "name": "node express with pg",
     "version": "0.0.1",
     "dependencies": {
-        "express": "^4.16.2"
+        "express": "^4.16.2",
+        "pg": "^6.4.2",
+        "request": "2.61.0",
     },
     "engines": {
         "node": "v4.1.X",
@@ -10,5 +12,6 @@
     },
     "script": {
         "start": "node app.js"
-    }
+    },
+    "main": "app.js",
 }
