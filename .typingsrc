@@ -1,7 +1,0 @@
-{
-	"proxy": "http://sg-sh128-1.isid.co.jp:8080",
-	"https-proxy": "http://sg-sh128-1.isid.co.jp:8080",
-	"rejectUnauthorized": false,
-	"registryURL": "http://api.typings.org/",
-	"defaultSource": "dt"
-}
