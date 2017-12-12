@@ -1,13 +1,27 @@
 {
-	"name": "sample_atom",
-	"version": "0.0.1",
-	"dependencies": {
-		"body-parser": "^1.14.2",
-		"express": "^4.13.4",
-		"request": "2.61.0"
-	},
-	"engines": {
-		"node": "v4.1.X",
-		"npm": "2.14.X"
-	}
+    "name": "express",
+    "version": "0.0.1",
+    "dependencies": {
+        "body-parser": "^1.14.2",
+        "express": "^4.16.2",
+        "pg": "^6.4.2",
+        "debug": "^2.6.3",
+        "request": "2.61.0"
+    },
+    "engines": {
+        "node": "v4.1.X",
+        "npm": "2.14.X"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "production": {
+        "use_env_variable": "DATABAS_URL",
+        "dialect": "postgres"
+    }
+    "main": "server.js",
+    "devDependencies": {},
+    "author": "",
+    "license": "ISC",
+    "description": ""
 }
