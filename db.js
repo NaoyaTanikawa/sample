@@ -5,14 +5,16 @@ var options = {
 };
 var pgp = require('pg-promise')(options);
 if ( process.env.DATABASE_URL ) {
-    const pgurl = url.parse( process.env.DATABASE_URL, false );
-    const auth = pgurl.auth.split(':');
+    var pgurl = url.parse( process.env.DATABASE_URL, false );
+    pgurl[username] = pgurl.auth.split(':')[0];
+    pgurl[password] = pgurl.auth.split(':')[1];
+    pgurl[database] = pgurl.pathname('/')[1];
     var connection = {
         host: pgurl.hostname,
         port: pgurl.port,
-        database: pgurl.pathname,
-        user: auth[0],
-        password: auth[1]
+        database: pgurl.database,
+        user: pgurl.username,
+        password: pgurl.password
     };
 } else {
     var connection = {
