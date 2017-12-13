@@ -8,7 +8,7 @@ if ( process.env.DATABASE_URL ) {
     var pgurl = url.parse( process.env.DATABASE_URL, false );
     pgurl[username] = pgurl.auth.split(':')[0];
     pgurl[password] = pgurl.auth.split(':')[1];
-    pgurl[database] = pgurl.pathname('/')[1];
+    pgurl[database] = pgurl.pathname('/')[1]
     var connection = {
         host: pgurl.hostname,
         port: pgurl.port,
