@@ -8,7 +8,7 @@ if ( process.env.DATABASE_URL ) {
     const pgurl = url.parse( process.env.DATABASE_URL, false );
     const auth = pgurl.auth.split(':');
     var connection = {
-        host: pgurl.host,
+        host: pgurl.hostname,
         port: pgurl.port,
         database: pgurl.pathname,
         user: auth[0],
@@ -23,11 +23,11 @@ if ( process.env.DATABASE_URL ) {
         password: config.password
     };
 }
-var db = pgp(connection);
 console.log('Connecting to Postgres at postgres://'
         + connection.user + '.'
         + connection.password + '@'
         + connection.host + ':'
         + connection.port + '/'
         + connection.database );
+var db = pgp(connection);
 module.exports = db;

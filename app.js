@@ -13,7 +13,6 @@ var result = "";
 app.get('/', function(request, response) {
     db.any("select * from salesforce.Account")
         .then( function(data) {
-            console.log(process.env.DATABASE_URL);
             result = JSON.stringify(data);
             //console.log(data);
         })
