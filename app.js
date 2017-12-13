@@ -9,15 +9,18 @@ const pg = require('pg');
 const PORT = process.env.PORT || 3001;
 var db = require('./db');
 
+var result = "";
 app.get('/', function(request, response) {
     db.any("select * from salesforce.Account")
         .then( function(data) {
-            console.log(data);
+            result = JSON.stringify(data);
+
+            //console.log(data);
         })
         .catch( function(error) {
             console.log(error);
         });
-    response.send('Hello, World!');
+    response.send(result);
 })
 
 app.listen(PORT);
