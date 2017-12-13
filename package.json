@@ -8,8 +8,7 @@
         "pg-promise": "^7.3.2"
     },
     "engines": {
-        "node": "v4.1.X",
-        "npm": "2.14.X"
+        "node": "v6.11.4"
     },
     "scripts": {
         "start": "node app.js"
