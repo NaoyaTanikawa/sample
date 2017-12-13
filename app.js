@@ -11,6 +11,7 @@ var db = require('./db');
 
 var result = "";
 app.get('/', function(request, response) {
+    /*
     db.any("select * from salesforce.Account")
         .then( function(data) {
             result = JSON.stringify(data);
@@ -20,6 +21,7 @@ app.get('/', function(request, response) {
         .catch( function(error) {
             console.log(error);
         });
+        */
     response.send(result);
 })
 
