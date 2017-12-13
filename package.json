@@ -4,7 +4,8 @@
     "dependencies": {
         "express": "^4.16.2",
         "pg": "^6.4.2",
-        "request": "2.61.0"
+        "request": "2.61.0",
+        "pg-promise": "^7.3.2"
     },
     "engines": {
         "node": "v4.1.X",
