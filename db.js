@@ -1,15 +1,18 @@
 const config = require('./config.json');
+const url = require('url');
 var options = {
     //initialization options;
 };
 var pgp = require('pg-promise')(options);
 if ( process.env.DATABASE_URL ) {
+    const pgurl = url.parse( process.env.DATABASE_URL, false );
+    const auth = pgurl.auth.split(':');
     var connection = {
-        host: process.env.DB_HOST,
-        port: 5432,
-        database: process.env.DB_DATABASE,
-        user: process.env.DB_USERNAME,
-        password: process.env.DB_PASSWORD
+        host: pgurl.host,
+        port: pgurl.port,
+        database: pgurl.pathname,
+        user: auth[0],
+        password: auth[1]
     };
 } else {
     var connection = {
