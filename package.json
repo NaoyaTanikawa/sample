@@ -1,5 +1,5 @@
 {
-    "name": "node express with pg",
+    "name": "node-express-with-pg",
     "version": "0.0.1",
     "dependencies": {
         "express": "^4.16.2",
@@ -10,7 +10,7 @@
         "node": "v4.1.X",
         "npm": "2.14.X"
     },
-    "script": {
+    "scripts": {
         "start": "node app.js"
     },
     "main": "app.js"
