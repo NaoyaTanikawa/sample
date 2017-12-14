@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
     db.any("select * from salesforce.Account")
         .then( function(data) {
             result = JSON.stringify(data);
-            //console.log(data);
+            console.log(data);
         })
         .catch( function(error) {
             console.log(error);
