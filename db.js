@@ -1,4 +1,4 @@
-const config = require('./config.json');
+const config = require('./dbconfig.json');
 const url = require('url');
 var options = {
     //initialization options;

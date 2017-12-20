@@ -1,0 +1,223 @@
+== Info: STATE: INIT => CONNECT handle 0x6000908c0; line 1103 (connection #-5000) 
+== Info: Added connection 0. The cache now contains 1 members
+== Info:   Trying 133.158.251.200...
+== Info: STATE: CONNECT => WAITCONNECT handle 0x6000908c0; line 1156 (connection #0) 
+== Info: Connected to sg-sh128-1.isid.co.jp (133.158.251.200) port 8080 (#0)
+== Info: STATE: WAITCONNECT => WAITPROXYCONNECT handle 0x6000908c0; line 1253 (connection #0) 
+== Info: Establish HTTP proxy tunnel to ap5.salesforce.com:443
+== Info: Proxy auth using Basic with user 'lisdf3'
+=> Send header, 177 bytes (0xb1)
+0000: CONNECT ap5.salesforce.com:443 HTTP/1.1
+0029: Host: ap5.salesforce.com:443
+0047: Proxy-Authorization: Basic bGlzZGYzOjExa3QxNw==
+0078: User-Agent: curl/7.47.1
+0091: Proxy-Connection: Keep-Alive
+00af: 
+== Info: Read response immediately from proxy CONNECT
+<= Recv header, 37 bytes (0x25)
+0000: HTTP/1.1 200 Connection established
+<= Recv header, 2 bytes (0x2)
+0000: 
+== Info: Proxy replied OK to CONNECT request
+== Info: ALPN, offering http/1.1
+== Info: Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+== Info: successfully set certificate verify locations:
+== Info:   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+== Info: TLSv1.2 (OUT), TLS header, Certificate Status (22):
+=> Send SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (OUT), TLS handshake, Client hello (1):
+=> Send SSL data, 512 bytes (0x200)
+0000: ......]F..j.rM47.....W.h..S....|J}:_.....0.,.(.$.............k.
+0040: j.i.h.9.8.7.6.........2...*.&.......=.5.../.+.'.#.............g.
+0080: @.?.>.3.2.1.0.........E.D.C.B.1.-.).%.......<./...A.............
+00c0: ..........5.........ap5.salesforce.com..........................
+0100: ................. .....................................3t.......
+0140: ..http/1.1......................................................
+0180: ................................................................
+01c0: ................................................................
+== Info: STATE: WAITPROXYCONNECT => SENDPROTOCONNECT handle 0x6000908c0; line 1241 (connection #0) 
+== Info: STATE: SENDPROTOCONNECT => PROTOCONNECT handle 0x6000908c0; line 1267 (connection #0) 
+<= Recv SSL data, 5 bytes (0x5)
+0000: ....[
+== Info: TLSv1.2 (IN), TLS handshake, Server hello (2):
+<= Recv SSL data, 91 bytes (0x5b)
+0000: ...W......fT..@....a.f.y......K.H..... ......e...~+O4.p...dX....
+0040: ./!8..z.0..................
+<= Recv SSL data, 5 bytes (0x5)
+0000: ....K
+== Info: TLSv1.2 (IN), TLS handshake, Certificate (11):
+<= Recv SSL data, 2635 bytes (0xa4b)
+0000: ...G..D...0...0..........V...BpZ$...EX3.{0...*.H........0~1.0...
+0040: U....US1.0...U....Symantec Corporation1.0...U....Symantec Trust 
+0080: Network1/0-..U...&Symantec Class 3 Secure Server CA - G40...1502
+00c0: 14000000Z..180214235959Z0..1.0...U....US1.0...U....California1.0
+0100: ...U....San Francisco1.0...U....Salesforce.com, Inc1.0...U....Ap
+0140: plications1.0...U....*.salesforce.com0.."0...*.H.............0..
+0180: .......F8.).q..?v:..W,...... ..y..-.:......q.6E.28......@.'..5;7
+01c0: j..=u;/x..v....$`.^..2........;..o......J.h,;..(..$.!...&....'..
+0200: ..x...q'.K.9...D.|..W.........`...]......).-..b.UmZ.............
+0240: sk.(..k.P....71..G..a..^...w...:p..."...#F.pJ.bV....,.S.E(....2
+0280: .c.vj.........i0..e0...U....0...*.salesforce.com0...U....0.0...U
+02c0: ...........0...U.%..0...+.........+.......0e..U. .^0\0Z..`.H...E
+0300: ..60L0#..+.........https://d.symcb.com/cps0%..+.......0...https:
+0340: //d.symcb.com/rpa0...U.#..0..._`.a.U..C..`*..z.C..0+..U...$0"0 .
+0380: .....http://ss.symcb.com/ss.crl0W..+........K0I0...+.....0...htt
+03c0: p://ss.symcd.com0&..+.....0...http://ss.symcb.com/ss.crt0...*.H.
+0400: ..............,SO..k.u......R.....g].=...:.T[.g..R;....rJ...c<.
+0440: ...l....fm.^.].....Q[x?.....)......e../........h.x.CEQ.;]G...]5p
+0480: ....Z..Y...r..k..........].$.t....t...pl.....8']u.....Ir...R7..
+04c0: ..#...4...)..}.+.....=.......FC>.........T|....cE..U.a...^1{...
+0500: pf..2...#.N...<0..80.. .......Q?.t8p.4@A.0....0...*.H........0..
+0540: 1.0...U....US1.0...U....VeriSign, Inc.1.0...U....VeriSign Trust 
+0580: Network1:08..U...1(c) 2006 VeriSign, Inc. - For authorized use o
+05c0: nly1E0C..U...<VeriSign Class 3 Public Primary Certification Auth
+0600: ority - G50...131031000000Z..231030235959Z0~1.0...U....US1.0...U
+0640: ....Symantec Corporation1.0...U....Symantec Trust Network1/0-..U
+0680: ...&Symantec Class 3 Secure Server CA - G40.."0...*.H...........
+06c0: ..0.............t-..V9.JR...K...h..B(b..0S~U..[.z./.y....w....Y.
+0700: ..z.'.-...Z'..z.S%.H.FO..)..yV....:h..K.3A...<...z.!."..'...ha.
+0740: ..Q.3.....~.b...{.t.i5...=.......D.%.J....m.T.*j&..:cH..L.u.P../
+0780: ........%]..:.&M.)...=#o.J..........U2=.....R.J..zR!cu/...f.....
+07c0: .'..D|oK?..........c0.._0...U.......0.......00..U...)0'0%.#.!..h
+0800: ttp://s1.symcb.com/pca3-g5.crl0...U...........0/..+........#0!0.
+0840: ..+.....0...http://s2.symcb.com0k..U. .d0b0`..`.H...E..60R0&..+.
+0880: ........http://www.symauth.com/cps0(..+.......0...http://www.sym
+08c0: auth.com/rpa0)..U..."0 ..0.1.0...U....SymantecPKI-1-5340...U....
+0900: .._`.a.U..C..`*..z.C..0...U.#..0....e......0..C9...3130...*.H..
+0940: ...........^.VI..-e..6Q.....s...Y.X~l&.,...\#.",7...........2.Eo
+0980: ......p.2Be....*.?.....}C.t!.5(.c.....\K.. ....E.....]..K..$.F@
+09c0: e."r........3....~....%X.qh......NR$-..y.S.^/-M.m@.R+...x..n.M.
+0a00: -x..,=._.......0Rd....f..v...t.*..:......k....A."c....o)cf-?..r.
+0a40: ......;O.).
+<= Recv SSL data, 5 bytes (0x5)
+0000: ....M
+== Info: TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+<= Recv SSL data, 333 bytes (0x14d)
+0000: ...I...A....\......9"..d> 9....sX.._....$7..5...g<."..j#..Gg.hH
+0040: H.............D'.Nz.^7........Ae..e.d]O....e3..Y>..J..f...@...."
+0080: b[..z...)g.@a.....-..4.T9...MDf..K..B.`..+D3...|".A.^.\.f.....R.
+00c0: Al.. .`..Q......S\..b@...<B8..-.....AM....@?..........a.....&...
+0100: ........jr..........vH.(..&.x...m.)a....r..DA..b.P.s.3.5...\....
+0140: ....A.._.r.h.
+<= Recv SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (IN), TLS handshake, Server finished (14):
+<= Recv SSL data, 4 bytes (0x4)
+0000: ....
+=> Send SSL data, 5 bytes (0x5)
+0000: ....F
+== Info: TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+=> Send SSL data, 70 bytes (0x46)
+0000: ...BA...._G.x_-lb#.}..m......pA..Z.=.r....../....i[.Z....@%g....
+0040: Pq.K.S
+=> Send SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+=> Send SSL data, 1 bytes (0x1)
+0000: .
+=> Send SSL data, 5 bytes (0x5)
+0000: ....(
+== Info: TLSv1.2 (OUT), TLS handshake, Finished (20):
+=> Send SSL data, 16 bytes (0x10)
+0000: .....'....7UK...
+<= Recv SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (IN), TLS change cipher, Client hello (1):
+<= Recv SSL data, 1 bytes (0x1)
+0000: .
+<= Recv SSL data, 5 bytes (0x5)
+0000: ....(
+== Info: TLSv1.2 (IN), TLS handshake, Finished (20):
+<= Recv SSL data, 16 bytes (0x10)
+0000: .......e.0.zA8.\
+== Info: SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+== Info: ALPN, server did not agree to a protocol
+== Info: Server certificate:
+== Info: 	 subject: C=US; ST=California; L=San Francisco; O=Salesforce.com, Inc; OU=Applications; CN=*.salesforce.com
+== Info: 	 start date: Feb 14 00:00:00 2015 GMT
+== Info: 	 expire date: Feb 14 23:59:59 2018 GMT
+== Info: 	 subjectAltName: ap5.salesforce.com matched
+== Info: 	 issuer: C=US; O=Symantec Corporation; OU=Symantec Trust Network; CN=Symantec Class 3 Secure Server CA - G4
+== Info: 	 SSL certificate verify ok.
+== Info: STATE: PROTOCONNECT => DO handle 0x6000908c0; line 1288 (connection #0) 
+=> Send SSL data, 5 bytes (0x5)
+0000: ....y
+=> Send header, 97 bytes (0x61)
+0000: GET /00P7F000001MI6t HTTP/1.1
+001f: Host: ap5.salesforce.com
+0039: User-Agent: curl/7.47.1
+0052: Accept: */*
+005f: 
+== Info: STATE: DO => DO_DONE handle 0x6000908c0; line 1350 (connection #0) 
+== Info: STATE: DO_DONE => WAITPERFORM handle 0x6000908c0; line 1477 (connection #0) 
+== Info: STATE: WAITPERFORM => PERFORM handle 0x6000908c0; line 1487 (connection #0) 
+<= Recv SSL data, 5 bytes (0x5)
+0000: ....O
+== Info: HTTP 1.1 or later with persistent connection, pipelining supported
+<= Recv header, 17 bytes (0x11)
+0000: HTTP/1.1 200 OK
+<= Recv header, 130 bytes (0x82)
+0000: Set-Cookie: BrowserId=9cPZJDzhStSkRzbYxgUL7w;Path=/;Domain=.sale
+0040: sforce.com;Expires=Sat, 17-Feb-2018 09:25:25 GMT;Max-Age=5184000
+<= Recv header, 64 bytes (0x40)
+0000: Strict-Transport-Security: max-age=31536000; includeSubDomains
+<= Recv header, 33 bytes (0x21)
+0000: X-Content-Type-Options: nosniff
+<= Recv header, 33 bytes (0x21)
+0000: X-XSS-Protection: 1; mode=block
+<= Recv header, 53 bytes (0x35)
+0000: Content-Security-Policy: upgrade-insecure-requests 
+<= Recv header, 68 bytes (0x44)
+0000: Cache-Control: no-cache,must-revalidate,max-age=0,no-store,priva
+0040: te
+<= Recv header, 40 bytes (0x28)
+0000: Content-Type: text/html; charset=UTF-8
+<= Recv header, 23 bytes (0x17)
+0000: Vary: Accept-Encoding
+<= Recv header, 19 bytes (0x13)
+0000: Connection: close
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 597 bytes (0x255)
+0000: 
+0002: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "
+0042: http://www.w3.org/TR/html4/loose.dtd">.<html>.<head>.    <meta H
+0082: TTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">......<script>.if (this.Sf
+00c2: dcApp && this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneN
+0102: avigator.handleRedirect('https://login.salesforce.com/?ec=302&st
+0142: artURL=%2F00P7F000001MI6t'); }  else .if (window.location.replac
+0182: e){ .window.location.replace('https://login.salesforce.com/?ec=3
+01c2: 02&startURL=%2F00P7F000001MI6t');.} else {;.window.location.href
+0202:  ='https://login.salesforce.com/?ec=302&startURL=%2F00P7F000001M
+0242: I6t';.} .</script>.
+<= Recv SSL data, 5 bytes (0x5)
+0000: .....
+<= Recv data, 697 bytes (0x2b9)
+0000: .</head>...</html>......<!-- Body events -->.<script type="text/
+0040: javascript">function bodyOnLoad(){if(window.PreferenceBits){wind
+0080: ow.PreferenceBits.prototype.csrfToken="null";};}function bodyOnB
+00c0: eforeUnload(){}function bodyOnFocus(){}function bodyOnUnload(){}
+0100: </script>.....</body>.</html>...<!--............................
+0140: ................................................................
+0180: ................................................................
+01c0: ................................................................
+0200: ................................................................
+0240: ................................................................
+0280: .....................................................-->.
+<= Recv SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (IN), TLS alert, Client hello (1):
+<= Recv SSL data, 2 bytes (0x2)
+0000: ..
+== Info: nread <= 0, server closed connection, bailing
+== Info: STATE: PERFORM => DONE handle 0x6000908c0; line 1645 (connection #0) 
+== Info: Curl_done
+== Info: Closing connection 0
+== Info: The cache now contains 0 members
+=> Send SSL data, 5 bytes (0x5)
+0000: .....
+== Info: TLSv1.2 (OUT), TLS alert, Client hello (1):
+=> Send SSL data, 2 bytes (0x2)
+0000: ..
