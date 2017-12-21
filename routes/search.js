@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 var sdb = require('../db');
 
+shortId = new String();
+
 var fileList = [
     {
         id: "00001",
@@ -20,10 +22,10 @@ var fileList = [
 
 router.get('/', (req,res) => {
     var query = req.query.reqName;
-    var cObj;
+    var cObj = '';
     var dObj;
     if ( !query ) {
-        res.render('search', {});
+        return res.render('search', {});
     }
     sdb.connect()
         .then( obj => {  // success to connect
@@ -31,17 +33,26 @@ router.get('/', (req,res) => {
             var cSoql = '';//' WHERE Parent.Type IN (\'Account\')';
             var connectA = ' AND ';
             if ( query ) {
-                selectIds = query.replace('/api/g',' ').split(' ');
-                cSoql += ((cSoql == '') ? 'WHERE ' : connectA) + 'id IN selectIds';
+                let sp1B = / /g;
+                let sp2B = /　/g;
+                selectIds = '\'' + query.replace(sp2B,' ').replace(sp1B,'\',\'') + '\'';
+                cSoql += ((cSoql == '') ? ' WHERE ' : connectA) + 'id IN (' + selectIds +')';
+                console.log(sSoql + cSoql);
             }
             cObj = obj;
             return cObj.any(sSoql + cSoql);
         })
         .then( data => {  // success to select
             dObj = data;
+            shortIdPre = dObj[0].sfid;
+            shortId = shortIdPre.slice(0,-3);
             if ( data ) {
                 if ( data.length == 1 ) {
-
+                    console.log('call ' + shortId + ' with id :' + shortIdPre);
+                    res.render('result', {
+                        fileId: shortId,
+                        DownloadButtonOnclick: 'location.href=\'https://ap5.salesforce.com/' + shortId + '\''
+                    });
                 } else {
                     res.json(data);
                 }

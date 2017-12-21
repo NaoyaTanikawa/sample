@@ -3,7 +3,7 @@ const express = require('express');
 var app = express();
 var router = express.Router();
 var user = require('./routes/user');
-var search = require('./routes/search.js');
+var search = require('./routes/search');
 router.use('/search', search);
 router.use('/users', user);
 app.use('/api', router);
